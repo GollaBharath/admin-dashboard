@@ -1,0 +1,27 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	height: 100vh;
+	grid-template-areas: "sbr hdr" "sbr main";
+}
+
+.sidebar {
+	grid-area: sbr;
+	background-color: blue;
+}
+
+.header {
+	grid-area: hdr;
+	background-color: aqua;
+}
+
+.main {
+	grid-area: main;
+	background-color: aliceblue;
+}
