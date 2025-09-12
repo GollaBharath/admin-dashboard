@@ -25,3 +25,37 @@ body {
 	grid-area: main;
 	background-color: aliceblue;
 }
+
+.logo img {
+	height: 2rem;
+}
+
+.logo {
+	color: white;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.25vw;
+}
+
+.mid li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.7vw;
+}
+
+.mid li img {
+	height: 1rem;
+}
+
+.end li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.7vw;
+}
+
+.end li img {
+	height: 1rem;
+}
