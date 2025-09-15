@@ -230,6 +230,7 @@ body {
 .card .card-main {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 }
 
 .card-main .matter {
@@ -324,6 +325,7 @@ body {
 .person .txt p {
 	font-size: small;
 	font-weight: 370;
+	margin-top: 2px;
 }
 
 .tren-card .person img {
