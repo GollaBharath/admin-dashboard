@@ -1,7 +1,18 @@
+@font-face {
+	font-family: "Odin-like";
+	src: url("./assets/fonts/Odin-like/WDXLLubrifontJPN-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Default-Style";
+	src: url("./assets/fonts/Default-style/JosefinSans-VariableFont_wght.ttf");
+}
+
 * {
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
+	font-family: "Default-Style";
 }
 
 body {
@@ -13,29 +24,42 @@ body {
 
 .sidebar {
 	grid-area: sbr;
-	background-color: blue;
+	background-color: rgb(2, 118, 212);
 }
 
 .header {
 	grid-area: hdr;
-	background-color: aqua;
+	background-color: rgb(255, 255, 255);
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-areas: "Search Acc" "Greet Btns";
+	height: fit-content;
 }
 
 .main {
 	grid-area: main;
 	background-color: aliceblue;
 }
-
+/* #region sidebar */
 .logo img {
-	height: 2rem;
+	height: 2.5rem;
+	align-self: center;
+	filter: invert(1);
 }
-
+.logo h1 {
+	align-self: last baseline;
+}
 .logo {
 	color: white;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 0.25vw;
+	margin: 5px;
+}
+
+.mid {
+	margin: 20px;
 }
 
 .mid li {
@@ -43,10 +67,22 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	gap: 0.7vw;
+	color: white;
+	margin: 10px 0px;
+}
+
+.mid li p {
+	align-self: last baseline;
 }
 
 .mid li img {
-	height: 1rem;
+	height: 1.25rem;
+	filter: invert(1);
+}
+
+.end {
+	margin: 20px;
+	margin-top: 30px;
 }
 
 .end li {
@@ -54,8 +90,100 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	gap: 0.7vw;
+	color: white;
+	margin: 10px 0px;
+}
+
+.end li p {
+	align-self: last baseline;
 }
 
 .end li img {
+	height: 1.25rem;
+	filter: invert(1);
+}
+
+/* #endregion */
+
+/* #region header */
+
+.search {
+	display: flex;
+	align-items: center;
+	grid-area: Search;
+	width: 100%;
+}
+
+.search img {
+	height: 1rem;
+	justify-self: flex-start;
+	margin-left: 15px;
+	margin-right: 5px;
+}
+
+.search input {
+	justify-self: flex-end;
+	border: none;
+	border-radius: 10px;
+	background-color: rgb(179, 179, 179);
+	width: 70%;
+}
+
+.acc {
+	grid-area: Acc;
+	display: flex;
+	margin: 10px;
+	gap: 12px;
+	align-items: center;
+}
+
+.acc img {
 	height: 1rem;
 }
+
+#me {
+	border-radius: 50%;
+	height: 1.6rem;
+}
+
+.greet {
+	grid-area: Greet;
+	display: flex;
+	align-items: center;
+}
+
+.greet img {
+	height: 2.5rem;
+	border-radius: 50%;
+	margin: 10px;
+	margin-top: 0;
+}
+
+.greet .ingreet {
+	font-weight: 600;
+}
+
+.greet .ingreet p {
+	margin-top: 0px;
+	margin: 2px;
+	font-size: small;
+}
+
+.btns {
+	grid-area: Btns;
+}
+
+.btns button {
+	background-color: rgb(2, 118, 212);
+	color: white;
+	border: none;
+	height: 1.5rem;
+	width: 3.25rem;
+	border-radius: 10px;
+}
+
+/* #endregion */
+
+/* #region main */
+
+/* #endregion */
