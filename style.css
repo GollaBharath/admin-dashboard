@@ -33,12 +33,16 @@ body {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	grid-template-areas: "Search Acc" "Greet Btns";
-	height: fit-content;
+	height: min-content;
 }
 
 .main {
 	grid-area: main;
-	background-color: aliceblue;
+	background-color: rgb(204, 204, 204);
+	height: 100%;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-areas: "Pro Ann" "Pro tren";
 }
 /* #region sidebar */
 .logo img {
@@ -125,7 +129,7 @@ body {
 	justify-self: flex-end;
 	border: none;
 	border-radius: 10px;
-	background-color: rgb(179, 179, 179);
+	background-color: rgb(204, 204, 204);
 	width: 70%;
 }
 
@@ -171,19 +175,161 @@ body {
 
 .btns {
 	grid-area: Btns;
+	display: flex;
+	gap: 5px;
+	align-items: center;
 }
 
 .btns button {
 	background-color: rgb(2, 118, 212);
 	color: white;
 	border: none;
-	height: 1.5rem;
-	width: 3.25rem;
-	border-radius: 10px;
+	height: 2rem;
+	width: 4rem;
+	text-align: center;
+	border-radius: 7px;
 }
 
 /* #endregion */
 
-/* #region main */
+/* #region projects */
+
+.main img {
+	height: 1rem;
+}
+
+.projects {
+	grid-area: Pro;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.projects p {
+	font-size: 20px;
+}
+
+.projects .all-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.projects .card {
+	background-color: white;
+	display: flex;
+	border-radius: 5px;
+	margin: 5px;
+	min-height: 25vh;
+}
+
+.projects .card .deco-line {
+	width: 10px;
+	background-color: orange;
+}
+
+.card .card-main {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-main .matter {
+	margin: 10px;
+}
+
+.matter h5 {
+	margin-bottom: 10px;
+}
+
+.card .card-main p {
+	font-size: 10px;
+	font-weight: 350;
+}
+
+.card-main .clogos {
+	align-self: flex-end;
+	margin-right: 10px;
+}
+
+/* #endregion */
+
+/* #region ann */
+
+.announcements {
+	grid-area: Ann;
+}
+
+.announcements p {
+	font-size: 20px;
+	margin: 10px;
+}
+
+.announcements .ann-container {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+}
+
+.ann-container .ann .ap1 {
+	font-weight: 700;
+	font-size: small;
+}
+
+.ann-container .ann p {
+	font-weight: 400;
+	font-size: 9px;
+	margin: 5px;
+}
+
+.ann-container .divline {
+	width: 105%;
+	background-color: gray;
+	height: 1px;
+}
+
+/* #endregion */
+
+/* #region tren */
+
+.trending {
+	grid-area: tren;
+	padding: 10px;
+}
+
+.trending .tren-card {
+	background-color: white;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.tren-card .person {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 5px;
+}
+
+.person .txt {
+	margin: 5px;
+}
+
+.person .txt p {
+	font-size: small;
+	font-weight: 370;
+}
+
+.tren-card .person img {
+	height: 2rem;
+	border-radius: 50%;
+	margin: 5px;
+}
 
 /* #endregion */
